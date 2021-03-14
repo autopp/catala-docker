@@ -1,0 +1,11 @@
+--- Makefile	2021-03-14 00:56:41.000000000 +0900
++++ Makefile.pached	2021-03-14 03:25:24.000000000 +0900
+@@ -32,7 +32,7 @@
+ 
+ #> build					: Builds the Catala compiler
+ build:
+-	dune build @update-parser-messages
++	dune build @update-parser-messages || true
+ 	@$(MAKE) --no-print-directory format
+ 	dune build src/catala/catala.exe
+ 
